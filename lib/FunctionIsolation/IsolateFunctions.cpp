@@ -1039,6 +1039,7 @@ void IFI::run() {
     if (Function.Type == model::FunctionType::Fake)
       continue;
 
+    // WIP: don't use name
     auto *NewFunction = Function::Create(IsolatedFunctionType,
                                          GlobalValue::ExternalLinkage,
                                          "local_" + Function.name(),
