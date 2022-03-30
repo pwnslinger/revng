@@ -1383,6 +1383,9 @@ inline unsigned getMemoryAccessSize(llvm::Instruction *I) {
   return getPointeeSize(getPointer(I));
 }
 
+llvm::Function &
+moveToNewFunctionType(llvm::Function &OldFunction, llvm::FunctionType &NewType);
+
 /// Adds NewArguments and changes the return type of \p OldFunction
 ///
 /// \param OldFunction the original function from which the body will be stolen.
